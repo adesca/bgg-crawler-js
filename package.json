@@ -1,0 +1,25 @@
+{
+  "name": "bgg-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.11",
+    "@types/node": "^11.11.3",
+    "@types/xmldoc": "^1.1.4",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "rxjs": "^6.4.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.3.3333",
+    "xmldoc": "^1.1.2"
+  }
+}
