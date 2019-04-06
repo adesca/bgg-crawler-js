@@ -1,6 +1,5 @@
 import axios from 'axios';
 import cheerio from 'cheerio';
-import xmldoc from 'xmldoc';
 
 export interface AsyncCommand {
     execute: () => Promise<any>;
@@ -49,8 +48,8 @@ export class FetchBoardGamesByIdCommand implements AsyncCommand {
         const url = `https://boardgamegeek.com/xmlapi2/thing?id=${concatedGameIds}`;
         return axios.get<string>(url, {responseType: 'xml'})
             .then(response => {
-                const itemsAsXml = new xmldoc.XmlDocument(response.data);
-                return itemsAsXml.childrenNamed("item");
+                // const itemsAsXml = new xmldoc.XmlDocument(response.data);
+                return response.data
             })
     };
 

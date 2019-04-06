@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node index.js"
+    "start": "tsc && node index.js",
+    "prerun:pipeline": "tsc",
+    "run:pipeline": "node index.js ; node convertXmlToJson.js ; node enrichJson.js"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +15,12 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/cheerio": "^0.22.11",
+    "@types/json2csv": "^4.2.0",
     "@types/node": "^11.11.3",
     "@types/xmldoc": "^1.1.4",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
+    "json2csv": "^4.4.1",
     "rxjs": "^6.4.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.3.3333",
